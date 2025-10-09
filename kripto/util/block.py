@@ -34,3 +34,17 @@ class Block:
             if hash_result.startswith(prefix):
                 return hash_result
             self.nonce += 1
+
+    def show_block(self, only_Header=False):
+        print(f"Block Number: {self.number}")
+        print(f"Previous Block Hash: {self.prev_hash}")
+        print(f"Merkle Root: {self.merkle_root}")
+        print(f"Timestamp: {self.timestamp}")
+        print(f"Nonce: {self.nonce}")
+        if not only_Header:
+            print(f"Self Hash: {self.calculate_hash()}")
+            print("Transactions:")
+            for tx in self.transactions:
+                print("---------------")
+                tx.show_transaction()
+            print("\n")

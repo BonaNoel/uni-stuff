@@ -50,3 +50,21 @@ class Blockchain:
 
         print("Blockchain is valid.")
         return True
+    
+    def show_block(self, index):
+        if 0 <= index < len(self.chain):
+            self.chain[index].show_block(only_Header=False)
+        else:
+            print("Block index out of range.")
+
+    def show_chain(self):
+        for block in self.chain:
+            block.show_block(only_Header=True)
+            print("---------------")
+
+    def show_pending(self):
+        if not self.pending_transactions:
+            print("No pending transactions.")
+            return
+        for tx in self.pending_transactions:
+            tx.show_transaction()

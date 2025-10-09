@@ -18,3 +18,11 @@ class Transaction:
         }
         transaction_string = json.dumps(transaction_dict, sort_keys=True)
         return hashlib.sha256(transaction_string.encode()).hexdigest()
+    
+    def show_transaction(self):
+        print(f"Sender: {self.sender}")
+        print(f"Receiver: {self.receiver}")
+        print(f"Amount: {self.amount}")
+        print(f"Signature: {self.signature}")
+        print(f"Transaction Hash: {self.calculate_hash()}")
+        print("\n")
