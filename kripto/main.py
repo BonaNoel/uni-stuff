@@ -4,5 +4,3 @@ if __name__ == "__main__":
 
     blockchain = Blockchain()
     cli.cli(blockchain)
-    
-

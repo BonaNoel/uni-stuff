@@ -1,0 +1,7 @@
+add-transaction alice bob 15
+add-transaction cecil dave 20
+show-pending
+mine-block
+show-chain
+show-block 1
+validate

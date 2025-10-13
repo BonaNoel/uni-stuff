@@ -1,8 +1,8 @@
 import hashlib
 import json
 from time import time
-from block import Block
-from transaction import Transaction
+from .block import Block
+from .transaction import Transaction
 
 
 class Blockchain:
@@ -19,13 +19,16 @@ class Blockchain:
     def get_last_block(self):
         return self.chain[-1]
     
-    def add_transaction(self, sender, receiver, amount, signature):
-        transaction = Transaction(sender, receiver, amount, signature)
-        self.pending_transactions.append(transaction)
+    def add_transaction(self, sender, receiver, amount):
+        transaction = Transaction(sender, receiver, amount)
+        if transaction.verify_signature():
+            self.pending_transactions.append(transaction)
+        else:
+            print("Invalid transaction signature.\n")
 
     def mine_block(self):
         if not self.pending_transactions:
-            print("No transactions to mine.")
+            print("No transactions to mine.\n")
             return
 
         last_block = self.get_last_block()
@@ -33,7 +36,7 @@ class Blockchain:
         mined_hash = new_block.mine(self.difficulty)
         self.chain.append(new_block)
         self.pending_transactions = []
-        print(f"Block {new_block.number} mined with hash: {mined_hash}")
+        print(f"Block {new_block.number} mined with hash: {mined_hash}\n")
 
     def validate_chain(self):
         for i in range(1, len(self.chain)):
@@ -48,14 +51,14 @@ class Blockchain:
                 print(f"Block {current.number} failed proof of work.")
                 return False
 
-        print("Blockchain is valid.")
+        print("Blockchain is valid.\n")
         return True
     
     def show_block(self, index):
         if 0 <= index < len(self.chain):
             self.chain[index].show_block(only_Header=False)
         else:
-            print("Block index out of range.")
+            print("Block index out of range.\n")
 
     def show_chain(self):
         for block in self.chain:
@@ -64,7 +67,7 @@ class Blockchain:
 
     def show_pending(self):
         if not self.pending_transactions:
-            print("No pending transactions.")
+            print("No pending transactions.\n")
             return
         for tx in self.pending_transactions:
             tx.show_transaction()

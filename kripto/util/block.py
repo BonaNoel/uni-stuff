@@ -1,7 +1,7 @@
 import hashlib
 import time
 import json
-from utils import generate_merkle_root
+from .utils import generate_merkle_root
 
 class Block:
     def __init__(self, number, prev_hash, transactions):
@@ -36,15 +36,18 @@ class Block:
             self.nonce += 1
 
     def show_block(self, only_Header=False):
-        print(f"Block Number: {self.number}")
-        print(f"Previous Block Hash: {self.prev_hash}")
-        print(f"Merkle Root: {self.merkle_root}")
-        print(f"Timestamp: {self.timestamp}")
-        print(f"Nonce: {self.nonce}")
+        print("=" * 50)
+        print(f"Block Header:")
+        print(f"  Block Number: {self.number}")
+        print(f"  Previous Block Hash: {self.prev_hash}")
+        print(f"  Merkle Root: {self.merkle_root}")
+        print(f"  Timestamp: {self.timestamp}")
+        print(f"  Nonce: {self.nonce}")
+        print("=" * 50)
         if not only_Header:
-            print(f"Self Hash: {self.calculate_hash()}")
-            print("Transactions:")
+            print(f"  Self Hash: {self.calculate_hash()}")
+            print("  Transactions:")
             for tx in self.transactions:
-                print("---------------")
+                print("  " + "-" * 40)
                 tx.show_transaction()
-            print("\n")
+            print("=" * 50)

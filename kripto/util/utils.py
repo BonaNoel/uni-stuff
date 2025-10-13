@@ -1,11 +1,13 @@
 import hashlib
 from time import time
 
-def hash_transaction_pair(a, b):
-    combined = a.calculate_hash() + b.calculate_hash()
+
+def hash_transaction_pair(a_hash: str, b_hash: str) -> str:
+    combined = a_hash + b_hash
     return hashlib.sha256(combined.encode()).hexdigest()
 
-def generate_merkle_root(transactions):
+
+def generate_merkle_root(transactions: list) -> str | None:
     if not transactions:
         return None
 
@@ -13,12 +15,15 @@ def generate_merkle_root(transactions):
 
     while len(hashes) > 1:
         next_level = []
-        for i in range(0, len(hashes), 2):
+        i = 0
+        while i < len(hashes):
             if i + 1 < len(hashes):
-                combined_hash = hash_transaction_pair(hashes[i], hashes[i + 1])
+                next_level.append(hash_transaction_pair(hashes[i], hashes[i + 1]))
+                i += 2
             else:
-                combined_hash = hash_transaction_pair(hashes[i], hashes[i])
-            next_level.append(combined_hash)
+                # promote odd hash up unchanged
+                next_level.append(hashes[i])
+                i += 1
         hashes = next_level
 
     return hashes[0]

@@ -1,0 +1,14 @@
+add-transaction alice bob 15
+add-transaction cecil dave 20
+mine-block
+add-transaction bob dave 5
+add-transaction cecil alice 10
+mine-block
+add-transaction dave alice 40
+add-transaction bob cecil 30
+mine-block
+show-chain
+show-block 1
+show-block 2
+show-block 3
+validate
