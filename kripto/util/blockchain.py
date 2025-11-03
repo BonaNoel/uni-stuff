@@ -14,6 +14,7 @@ class Blockchain:
 
     def create_genesis_block(self):
         genesis_block = Block(0, "0", [])
+        mined_hash = genesis_block.mine(self.difficulty)
         self.chain.append(genesis_block)
 
     def get_last_block(self):

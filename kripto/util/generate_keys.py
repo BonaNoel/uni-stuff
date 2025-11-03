@@ -3,7 +3,6 @@
 from cryptography.hazmat.primitives.asymmetric import ec
 from cryptography.hazmat.primitives import serialization
 import os
-import secrets
 
 USERS = ["alice", "bob", "cecil", "dave"]
 KEYS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "keys"))
