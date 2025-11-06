@@ -1,28 +1,24 @@
-# 1. read in from file (object file), it can be rotated to look around
-# wiremesh is enough, surface rendering is extra
+"""Minimal subdivision demo app.
 
-# 2. subdivide the mesh, at least 2 types (eg. loop, butterfly)
+Runs a small PyQt + OpenGL window that loads `objects/cube.obj` using the
+existing `half_edge.Mesh` loader. It shows a wireframe and lets you apply a
+simple midpoint subdivision up to 3 levels. This is intentionally minimal for
+a quick uni project demo.
+"""
 
-# 3. iterate with a press of a button, 3 levels is enough
-
-# 4. use half-edge data structure
-
-# use pyglet or moderngl
-
-import pyglet
-import moderngl
+import sys
+import sys
+from mgl_viewer import run
 
 
+def main():
+	mesh_path = 'objects/cube.obj'
+	if len(sys.argv) > 1:
+		mesh_path = sys.argv[1]
+	run(mesh_path)
 
-if __name__ == "__main__":
-    window = pyglet.window.Window(800, 600, "3D Subdivision")
-    vertices, faces = load_obj("path/to/your.obj")
 
-    @window.event
-    def on_draw():
-        if not hasattr(window, "mctx"):
-            window.mctx = moderngl.create_context()
-            print("Created moderngl context:", window.mctx)
-        window.clear()
+if __name__ == '__main__':
+	main()
 
-    pyglet.app.run()
+
