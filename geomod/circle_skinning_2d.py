@@ -22,6 +22,88 @@ class Circle:
 def compute_skinning(circles):
     # Step 1 Get touching points of circles
     touching_points = compute_touching_points(circles)
+    # Step 2 separate right/left touching points
+    left, right = compute_left_right(touching_points, circles)
+
+
+def compute_left_right(touching_points, circles):
+
+    def radical_center(c1, c2, c3):
+        x1, y1, r1 = c1.center[0], c1.center[1], c1.r
+        x2, y2, r2 = c2.center[0], c2.center[1], c2.r
+        x3, y3, r3 = c3.center[0], c3.center[1], c3.r
+
+        # Solve two radical lines: (x - x1)^2 + (y - y1)^2 - r1^2 = (x - x2)^2 + (y - y2)^2 - r2^2
+        A1 = 2*(x2 - x1)
+        B1 = 2*(y2 - y1)
+        C1 = x1**2 - x2**2 + y1**2 - y2**2 - r1**2 + r2**2
+
+        A2 = 2*(x3 - x2)
+        B2 = 2*(y3 - y2)
+        C2 = x2**2 - x3**2 + y2**2 - y3**2 - r2**2 + r3**2
+
+        denom = A1*B2 - A2*B1
+        if abs(denom) < 1e-10:
+            return None  # collinear centers
+        # We have the system: A1*x + B1*y + C1 = 0 and A2*x + B2*y + C2 = 0
+        # Rewrite as A1*x + B1*y = -C1, A2*x + B2*y = -C2 and solve.
+        D1 = -C1
+        D2 = -C2
+        x_r = (D1*B2 - D2*B1)/denom
+        y_r = (A1*D2 - A2*D1)/denom
+        return (x_r, y_r)
+
+    left = []
+    right = []
+
+    '''Thus the separation can easily be computedby the following steps 
+    (see notations of Fig. 7): if the vector oi−1oican be rotated tothe direction of
+    vector oi−1oi+1by a positive angle (in counterclockwise direction, withless than 
+    180◦) then the touching point being closer to the radical center riwill be inthe
+    left group, i.e. will be denoted by pi. If the direction of rotation is opposite
+    (as itis for the next circle in Fig. 7) then the touching point closer to the
+    radical center ri+1is in the right group: ¯pi+1. Special attention must pay to the 
+    ﬁrst and last circle as wellas for circles with collinear centers. In these cases 
+    the vector oi−1oiis rotated to thedirection of oi−1piand the angle is similarly 
+    measured and evaluated as above'''
+
+    for i in range(len(circles)):
+        if i == 0:
+            rc = radical_center(circles[0], circles[1], circles[2])
+            p1 = touching_points[0]
+            p2 = touching_points[1]
+            vec_o0o1 = (circles[1].center[0] - circles[0].center[0], circles[1].center[1] - circles[0].center[1])
+            vec_o0p1 = (p1[0] - circles[0].center[0], p1[1] - circles[0].center[1])
+            cross = vec_o0o1[0]*vec_o0p1[1] - vec_o0o1[1]*vec_o0p1[0]
+            if cross > 0:
+                left.append(p1)
+                right.append(p2)
+            else:
+                right.append(p1)
+                left.append(p2)
+        elif i == len(circles) - 1:
+            rc = radical_center(circles[-3], circles[-2], circles[-1])
+            p1 = touching_points[-2]
+            p2 = touching_points[-1]
+            vec_on2on1 = (circles[-2].center[0] - circles[-1].center[0], circles[-2].center[1] - circles[-1].center[1])
+            vec_on2p2 = (p2[0] -circles[-1].center[0], p2[1] - circles[-1].center[1])
+            cross = vec_on2on1[0]*vec_on2p2[1] - vec_on2on1[1]*vec_on2p2[0]
+            if cross > 0:
+                left.append(p2)
+                right.append(p1)
+            else:
+                right.append(p2)
+                left.append(p1)
+        else:
+            rc = radical_center(circles[i-1], circles[i],circles[i+1])
+            p_candidates = touching_points[2*i:2*i+2]
+            vec_oi_iminus1_oi_plus1 = (circles[i+1].center[0] - circles[i-1].center[0], circles[i+1].center[1] - circles[i-1].center[1])
+            # Determine which point is closer to radical center
+            d0 =
+        
+
+    return left, right
+
 
 def compute_touching_points(circles):
     
@@ -165,65 +247,34 @@ def compute_touching_points(circles):
         x_r = (D1*B2 - D2*B1)/denom
         y_r = (A1*D2 - A2*D1)/denom
         return (x_r, y_r)
-
-    def is_collinear(P, O, R, tol=1e-6):
-        # P, O, R are points (x,y)
-        x0, y0 = O
-        x1, y1 = P
-        x2, y2 = R
-        # Distance from P to line O-R
-        dist = abs((y2 - y0)*x1 - (x2 - x0)*y1 + x2*y0 - y2*x0) / math.hypot(y2 - y0, x2 - x0)
-        return dist < tol
    
 
-    def check_orientation(P, O, desired='CCW'):
-        # radius vector
-        rx, ry = P[0] - O[0], P[1] - O[1]
-        # tangent vector
-        tx, ty = -ry, rx  # CCW
-        if desired == 'CW':
-            tx, ty = ry, -rx
-        # Here you can compare with vector to next point or some reference
-        # For now, just return tangent vector for later use
-        return (tx, ty)
-
-    def get_touching_point_of_2_circles(C1, C2):
-        # Calculate touching point between circle C1 and C2
+    def get_closest_point_on_circle_to_circle(C1, C2):
+        # calculate the line computed by the 2 centers
         dx = C2.center[0] - C1.center[0]
         dy = C2.center[1] - C1.center[1]
         D = math.hypot(dx, dy)
-
-        # Guard against degenerate or numerically unstable situations:
         if D == 0:
-            # Return two opposite points on circle C1 as a fallback
-            p1 = (C1.center[0] + C1.r, C1.center[1])
-            p2 = (C1.center[0] - C1.r, C1.center[1])
-            return p1, p2
+            # coincident centers, return arbitrary point on C1
+            return (C1.center[0] + C1.r, C1.center[1])
+        
+        # Calculate both points on C1 which the line intersects
+        ux = dx / D
+        uy = dy / D
+        p1 = (C1.center[0] + C1.r * ux, C1.center[1] + C1.r * uy)
+        p2 = (C1.center[0] - C1.r * ux, C1.center[1] - C1.r * uy)
 
-        acos_arg = (C1.r + C2.r) / D
-        # clamp to [-1, 1]
-        if acos_arg > 1.0:
-            acos_arg = 1.0
-        elif acos_arg < -1.0:
-            acos_arg = -1.0
-
-        t_angle = math.acos(acos_arg)  # note: acos for internal tangents
-        c_angle = math.atan2(dy, dx)
-
-        p1 = (C1.center[0] + C1.r * math.cos(c_angle + t_angle),
-            C1.center[1] + C1.r * math.sin(c_angle + t_angle))
-
-        p2 = (C1.center[0] + C1.r * math.cos(c_angle - t_angle),
-            C1.center[1] + C1.r * math.sin(c_angle - t_angle))
-
-        return p1, p2
-
-    def check_if_point_on_circle(P, C):
-        # Check if point P is on circle C
-        dx = P[0] - C.center[0]
-        dy = P[1] - C.center[1]
-        dist = math.hypot(dx, dy)
-        return abs(dist - C.r) < 1e-6
+        #pygame.draw.circle(screen, WHITE, (int(p1[0]), int(p1[1])), 5)
+        #pygame.draw.circle(screen, WHITE, (int(p2[0]), int(p2[1])), 5)
+        
+        # Now determine which point is closest to both circles circumference
+        # Not by teh distance from center but from circumference
+        d1 = abs(math.hypot(p1[0] - C2.center[0], p1[1] - C2.center[1]) - C2.r)
+        d2 = abs(math.hypot(p2[0] - C2.center[0], p2[1] - C2.center[1]) - C2.r)
+        if d1 < d2:
+            return p1
+        else:
+            return p2
 
     touching_points = []
     # Calculate touching point for first circle with c1,c2
@@ -237,10 +288,10 @@ def compute_touching_points(circles):
         for i in range(1, len(circles) - 1):
             chosen_points = []
             # generate all Appollonius circles for ci
-            R = radical_center(circles[i-1], circles[i], circles[i+1])
-            print("Radical center: ", R)
-            if R is not None:
-                pygame.draw.circle(screen, WHITE, (int(R[0]), int(R[1])), 5)
+            #R = radical_center(circles[i-1], circles[i], circles[i+1])
+            #print("Radical center: ", R)
+            #if R is not None:
+                #pygame.draw.circle(screen, WHITE, (int(R[0]), int(R[1])), 5)
             Appollonius_circles = get_two_same_orientation_appolonius(circles[i-1], circles[i], circles[i+1])
             # First filter by orientation: keep only Apollonius solutions whose sign
             # triple (s1,s2,s3) is uniform (all +1 or all -1). This matches the
@@ -250,15 +301,12 @@ def compute_touching_points(circles):
                 ac, signs = item
                 if ac is None:
                     continue
-                pygame.draw.circle(screen, BLUE, (int(ac.center[0]), int(ac.center[1])), max(1, int(ac.r)), 2)
-                # now calculate circle[i] and ac touching point
-                tp = get_touching_point_of_2_circles(circles[i], ac)
-                print("Touching points from Apollonius circle: ", tp)
-                pygame.draw.circle(screen, RED, (int(tp[0][0]), int(tp[0][1])), 4)
-                pygame.draw.circle(screen, RED, (int(tp[1][0]), int(tp[1][1])), 4)
+                #pygame.draw.circle(screen, BLUE, (int(ac.center[0]), int(ac.center[1])), max(1, int(ac.r)), 2)
+                # now calculate closest point on circle[i] to ac 
+                point = get_closest_point_on_circle_to_circle(circles[i], ac)
+                #print("Touching points from Apollonius circle: ", point)
+                touching_points.append(point)
                 
-                # check orientation of touching points
-
     # Calculate touching point for last circle with cn-1,cn   
     result = get_touching_point_from_external_tanget(circles[-1], circles[-2])
     touching_points.append(result[0])
@@ -266,8 +314,8 @@ def compute_touching_points(circles):
 
     print("Touching points number: ", len(touching_points))
     # Show touching points with green dots
-    for tp in touching_points:
-        pygame.draw.circle(screen, GREEN, (int(tp[0]), int(tp[1])), 3)
+    #for tp in touching_points:
+        #pygame.draw.circle(screen, GREEN, (int(tp[0]), int(tp[1])), 3)
  
 
     return touching_points
