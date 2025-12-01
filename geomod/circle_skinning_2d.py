@@ -6,6 +6,9 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 WHITE = (255, 255, 255)
+PURPLE = (255, 0, 255)
+CYAN = (0, 255, 255)
+
 
 center = True
 center_pos = None
@@ -24,7 +27,172 @@ def compute_skinning(circles):
     touching_points = compute_touching_points(circles)
     # Step 2 separate right/left touching points
     left, right = compute_left_right(touching_points, circles)
+    # Step 3 calculate tangent vectors for hermite splines
+    left_tv, right_tv = compute_tangent_vectors(left, right, circles)
+    # Step 4 draw the hermite splines
+    draw_skins(left, right, left_tv, right_tv)
 
+def draw_skins(left_points, right_points, left_tangents, right_tangents):
+    """Sample cubic Hermite curves for left and right point chains and draw them.
+
+    Returns (left_curve_points, right_curve_points) where each is a flat list
+    of sampled 2D points (tuples).
+    """
+    def hermite_segment(p0, p1, v0, v1, steps=30):
+        pts = []
+        for i in range(steps + 1):
+            t = i / float(steps)
+            t2 = t * t
+            t3 = t2 * t
+            h30 = 2*t3 - 3*t2 + 1
+            h31 = -2*t3 + 3*t2
+            h32 = t3 - 2*t2 + t
+            h33 = t3 - t2
+            x = h30 * p0[0] + h31 * p1[0] + h32 * v0[0] + h33 * v1[0]
+            y = h30 * p0[1] + h31 * p1[1] + h32 * v0[1] + h33 * v1[1]
+            pts.append((x, y))
+        return pts
+
+    def hermite_chain(points, tangents, steps_per_seg=30):
+        n = len(points)
+        if n < 2:
+            return []
+        curve = []
+        for i in range(n - 1):
+            p0 = points[i]
+            p1 = points[i+1]
+            v0 = tangents[i]
+            v1 = tangents[i+1]
+            seg = hermite_segment(p0, p1, v0, v1, steps=steps_per_seg)
+            # avoid duplicating the last point of a segment except for final
+            if i < n - 2:
+                curve.extend(seg[:-1])
+            else:
+                curve.extend(seg)
+        return curve
+
+    # sample density (you can change to between 20 and 50)
+    steps = 30
+
+    left_curve = hermite_chain(left_points, left_tangents, steps_per_seg=steps)
+    right_curve = hermite_chain(right_points, right_tangents, steps_per_seg=steps)
+
+    # draw curves
+    if len(left_curve) > 1:
+        pygame.draw.lines(screen, PURPLE, False, [(int(x), int(y)) for x,y in left_curve], 2)
+    if len(right_curve) > 1:
+        pygame.draw.lines(screen, CYAN, False, [(int(x), int(y)) for x,y in right_curve], 2)
+
+    return left_curve, right_curve
+
+def compute_tangent_vectors(left_points, right_points, circles):
+    def compute_radical_line(c1, c2):
+        x1, y1, r1 = c1.center[0], c1.center[1], c1.r
+        x2, y2, r2 = c2.center[0], c2.center[1], c2.r
+
+        A = 2 * (x2 - x1)
+        B = 2 * (y2 - y1)
+        C = x1**2 - x2**2 + y1**2 - y2**2 - r1**2 + r2**2
+
+        return (A, B, C)
+
+    def distance_point_to_line(A, B, C, point):
+        x0, y0 = point
+        denom = math.hypot(A, B)
+        return 0.0 if denom == 0 else abs(A * x0 + B * y0 + C) / denom
+
+    def vector_from_points(p1, p2):
+        return (p2[0] - p1[0], p2[1] - p1[1])
+
+    def norm(v):
+        return math.hypot(v[0], v[1])
+
+    def normalize(v):
+        n = norm(v)
+        return (v[0] / n, v[1] / n) if n != 0 else (0.0, 0.0)
+
+    def dot(u, v):
+        return u[0] * v[0] + u[1] * v[1]
+
+    def tangent_unit(circle, p):
+        # radial vector from center to point
+        rx = p[0] - circle.center[0]
+        ry = p[1] - circle.center[1]
+        tx, ty = -ry, rx
+        return normalize((tx, ty))
+
+    n = len(circles)
+    # accumulators of distances to radical lines for each touching point index
+    left_dists = [[] for _ in range(n)]
+    right_dists = [[] for _ in range(n)]
+
+    # gather distances from each radical line (pair i,i+1)
+    for i in range(n - 1):
+        A, B, C = compute_radical_line(circles[i], circles[i+1])
+        # left points distances
+        d1_left = distance_point_to_line(A, B, C, left_points[i])
+        d2_left = distance_point_to_line(A, B, C, left_points[i+1])
+        left_dists[i].append(d1_left)
+        left_dists[i+1].append(d2_left)
+        # right points distances
+        d1_right = distance_point_to_line(A, B, C, right_points[i])
+        d2_right = distance_point_to_line(A, B, C, right_points[i+1])
+        right_dists[i].append(d1_right)
+        right_dists[i+1].append(d2_right)
+
+    # compute final tangent vectors using averaged distances
+    left_tv = [None] * n
+    right_tv = [None] * n
+
+    # helper to compute desired direction for orientation
+    def desired_direction(points, idx):
+        if idx < n - 1:
+            d = vector_from_points(points[idx], points[idx + 1])
+        else:
+            d = vector_from_points(points[idx - 1], points[idx])
+        if norm(d) == 0.0:
+            # fallback to center-to-center direction if touching points coincide
+            if idx < n - 1:
+                d = vector_from_points(circles[idx].center, circles[idx + 1].center)
+            else:
+                d = vector_from_points(circles[idx - 1].center, circles[idx].center)
+        return normalize(d)
+
+    for i in range(n):
+        # left
+        if len(left_dists[i]) > 0:
+            avg_d = sum(left_dists[i]) / len(left_dists[i])
+            mag = 2.0 * avg_d
+            t = tangent_unit(circles[i], left_points[i])
+            des = desired_direction(left_points, i)
+            if dot(t, des) < 0:
+                t = (-t[0], -t[1])
+            left_tv[i] = (t[0] * mag, t[1] * mag)
+        else:
+            left_tv[i] = (0.0, 0.0)
+
+        # right
+        if len(right_dists[i]) > 0:
+            avg_d = sum(right_dists[i]) / len(right_dists[i])
+            mag = 2.0 * avg_d
+            t = tangent_unit(circles[i], right_points[i])
+            des = desired_direction(right_points, i)
+            if dot(t, des) < 0:
+                t = (-t[0], -t[1])
+            right_tv[i] = (t[0] * mag, t[1] * mag)
+        else:
+            right_tv[i] = (0.0, 0.0)
+
+    # draw tangent vectors for debugging
+    # for j in range(n):
+    #     lp = left_points[j]
+    #     rp = right_points[j]
+    #     ltv = left_tv[j]
+    #     rtv = right_tv[j]
+    #     pygame.draw.line(screen, RED, (int(lp[0]), int(lp[1])), (int(lp[0] + ltv[0]), int(lp[1] + ltv[1])), 2)
+    #     pygame.draw.line(screen, BLUE, (int(rp[0]), int(rp[1])), (int(rp[0] + rtv[0]), int(rp[1] + rtv[1])), 2)
+
+    return left_tv, right_tv
 
 def compute_left_right(touching_points, circles):
 
@@ -53,6 +221,12 @@ def compute_left_right(touching_points, circles):
         y_r = (A1*D2 - A2*D1)/denom
         return (x_r, y_r)
 
+    def cross_product(v1, v2):
+        return v1[0]*v2[1] - v1[1]*v2[0]
+    
+    def vector_from_points(p1, p2):
+        return (p2[0] - p1[0], p2[1] - p1[1])
+
     left = []
     right = []
 
@@ -67,43 +241,86 @@ def compute_left_right(touching_points, circles):
     the vector oi−1oiis rotated to thedirection of oi−1piand the angle is similarly 
     measured and evaluated as above'''
 
-    for i in range(len(circles)):
-        if i == 0:
-            rc = radical_center(circles[0], circles[1], circles[2])
-            p1 = touching_points[0]
-            p2 = touching_points[1]
-            vec_o0o1 = (circles[1].center[0] - circles[0].center[0], circles[1].center[1] - circles[0].center[1])
-            vec_o0p1 = (p1[0] - circles[0].center[0], p1[1] - circles[0].center[1])
-            cross = vec_o0o1[0]*vec_o0p1[1] - vec_o0o1[1]*vec_o0p1[0]
-            if cross > 0:
+    # First circle
+    c1 = circles[0]
+    c2 = circles[1]
+    p1 = touching_points[0]
+    p2 = touching_points[1]
+    # compute vector o1o2
+    v_o1_o2 = vector_from_points(c1.center, c2.center)
+    # compute vector c1p1 and c1p2
+    v_o1_p1 = vector_from_points(c1.center, p1)
+    v_o1_p2 = vector_from_points(c1.center, p2)
+    # compute cross products to determine rotation direction
+    cross1 = cross_product(v_o1_o2, v_o1_p1)
+    if cross1 > 0:
+        left.append(p1)
+        right.append(p2)
+    else:
+        left.append(p2)
+        right.append(p1) 
+    
+
+    # Inner circles
+    for i in range(1, len(circles) - 1):
+        c_prev = circles[i-1]
+        c_curr = circles[i]
+        c_next = circles[i+1]
+        p1 = touching_points[2*i]
+        p2 = touching_points[2*i + 1]
+        # compute radical center R
+        R = radical_center(c_prev, c_curr, c_next)
+        # compute vector o(prev)o(curr)
+        v_op_oc = vector_from_points(c_prev.center, c_curr.center)
+        # compute vector o(prev)o(next)
+        v_op_on = vector_from_points(c_prev.center, c_next.center)
+        # compute cross products to determine rotation direction
+        crossc = cross_product(v_op_oc, v_op_on)
+        # compute distance from R to p1 and p2
+        d1 = math.hypot(p1[0] - R[0], p1[1] - R[1])
+        d2 = math.hypot(p2[0] - R[0], p2[1] - R[1])
+        if crossc > 0:
+            # counterclockwise
+            if d1 < d2:
                 left.append(p1)
                 right.append(p2)
             else:
-                right.append(p1)
-                left.append(p2)
-        elif i == len(circles) - 1:
-            rc = radical_center(circles[-3], circles[-2], circles[-1])
-            p1 = touching_points[-2]
-            p2 = touching_points[-1]
-            vec_on2on1 = (circles[-2].center[0] - circles[-1].center[0], circles[-2].center[1] - circles[-1].center[1])
-            vec_on2p2 = (p2[0] -circles[-1].center[0], p2[1] - circles[-1].center[1])
-            cross = vec_on2on1[0]*vec_on2p2[1] - vec_on2on1[1]*vec_on2p2[0]
-            if cross > 0:
                 left.append(p2)
                 right.append(p1)
-            else:
-                right.append(p2)
-                left.append(p1)
         else:
-            rc = radical_center(circles[i-1], circles[i],circles[i+1])
-            p_candidates = touching_points[2*i:2*i+2]
-            vec_oi_iminus1_oi_plus1 = (circles[i+1].center[0] - circles[i-1].center[0], circles[i+1].center[1] - circles[i-1].center[1])
-            # Determine which point is closer to radical center
-            d0 =
-        
+            # clockwise
+            if d1 < d2:
+                right.append(p1)
+                left.append(p2)
+            else:
+                right.append(p2)
+                left.append(p1)
+
+    # Last circle
+    c_last_minus_1 = circles[-2]
+    c_last = circles[-1]
+    p1 = touching_points[-2]
+    p2 = touching_points[-1]
+    # compute vector o(n-1)o(n)
+    v_onm1_on = vector_from_points(c_last_minus_1.center, c_last.center)
+    # compute vector o(n)p1 and o(n)p2
+    v_on_p1 = vector_from_points(c_last.center, p1)
+    v_on_p2 = vector_from_points(c_last.center, p2)
+    # compute cross products to determine rotation direction
+    crossn = cross_product(v_onm1_on, v_on_p1)
+    if crossn > 0:
+        left.append(p1)
+        right.append(p2)
+    else:
+        left.append(p2)
+        right.append(p1)
+
+
+    for i in range(len(left)):
+        pygame.draw.circle(screen, BLUE, (int(left[i][0]), int(left[i][1])), 4)
+        pygame.draw.circle(screen, GREEN, (int(right[i][0]), int(right[i][1])), 4)
 
     return left, right
-
 
 def compute_touching_points(circles):
     

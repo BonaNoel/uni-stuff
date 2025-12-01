@@ -1,0 +1,27 @@
+A házi feladat projekthez választott adatforráshoz 10 darab XQuery 3.1 lekérdezést kell készíteni, az alábbi követelményeknek megfelelve.
+
+Legalább 4 lekérdezés egy érvényes XML dokumentumot kell, hogy előállítson eredményként. Ehhez a kimeneti XML dokumentumokhoz XML sémákat kell készíteni és a kimenet előállításakor egy validate kifejezést kell használni az érvényesség ellenőrzéséhez.
+
+Legalább 2 lekérdezés egy tömböt vagy objektumot tartalmazó JSON dokumentumot kell, hogy előállítson eredményként.
+
+Legalább 1 lekérdezés érvényes HTML kimenetet kell, hogy előállítson.
+
+A lekérdezések között lehet legfeljebb 3 olyan, mely eredményként egyetlen atomi értéket vagy egy szekvenciát állítanak elő.
+
+A lekérdezések elején egy megjegyzésben le kell írni, hogy pontosan mi a végrehajtás eredménye (elegendő akár egyetlen mondatnyi szöveg).
+
+Ha a feladat részeként kell előállítani a lekérdezések bemeneteként szolgáló adatállományt, akkor az adatállományt és az azt előállító lekérdezést is mellékelni kell, az utóbbi beleszámít az elkészítendő 10 lekérdezésbe. A további lekérdezésekben lehet a lokális adatállománnyal dolgozni.
+
+Valamennyi lekérdezésnek végrehajthatónak kell lennie, a megfelelő eredményeket kell hogy szolgáltassák.
+
+A lekérdezésekben az XQuery minél több lehetőségének használatára kell törekedni.
+
+Megoldásként a lekérdezéseket, XML sémákat és az esetleges adatállomány(oka)t kell feltölteni egy ZIP állományban 
+
+
+
+Weboldal: https://www.fbi.gov/wanted/api
+Téma: FBI körözési lista
+Formátum: JSON
+Használandó adatok: Egy olyan tömböt kell használni, mely minden egyes körözött személyhez egy azt részletesen leíró objektumot tartalmaz.
+Megjegyzés: A tömb előállítása egy XQuery lekérdezéssel a feladat része. Az eredményt célszerű egy JSON dokumentumba menteni és a további lekérdezésekben lehet azzal dolgozni. Az összes körözött személy tömbje egy 4 mélységű dokumentum lesz. Az összes körözött személy itt listázható lapozással: https://api.fbi.gov/wanted/v1/list
