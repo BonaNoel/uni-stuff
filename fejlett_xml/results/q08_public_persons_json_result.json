@@ -1,0 +1,802 @@
+[
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2025-06-25T09:42:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/defacement-of-federal-property",
+        "uid": "07f33176ac684ec19ac5a2794bdf196f",
+        "status": "located",
+        "title": "DEFACEMENT OF FEDERAL PROPERTY"
+    },
+    {
+        "subjects": [ [ "Criminal Enterprise Investigations" ] ],
+        "publication": "2025-07-02T08:03:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/cei\/terry-matthews",
+        "uid": "de4766a45bf4435bb3303b6da7d1febb",
+        "status": "na",
+        "title": "TERRY MATTHEWS"
+    },
+    {
+        "subjects": [ [ "ViCAP Missing Persons" ] ],
+        "publication": "2025-07-02T07:26:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/missing-persons\/celeste-diana-doghmi---auburn-maine",
+        "uid": "5126982a11c6494fa53fb44d54c56206",
+        "status": "na",
+        "title": "CELESTE DIANA DOGHMI - AUBURN, MAINE"
+    },
+    {
+        "subjects": [ [ "Additional Violent Crimes" ] ],
+        "publication": "2022-11-03T10:49:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/additional\/vitelhomme-innocent",
+        "uid": "466379d55d804fdeabfc3944c5d44331",
+        "status": "na",
+        "title": "VITEL'HOMME INNOCENT"
+    },
+    {
+        "subjects": [ [ "Ten Most Wanted Fugitives", "Case of the Week" ] ],
+        "publication": "2024-07-11T13:11:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/topten\/cindy-rodriguez-singh",
+        "uid": "fa908b7efed64603b9f95efa0288643f",
+        "status": "na",
+        "title": "CINDY RODRIGUEZ SINGH"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons", "Indian Country" ] ],
+        "publication": "2022-10-14T15:36:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/ella-mae-begay",
+        "uid": "c02ec52912ac4f4db084f6205c3849e7",
+        "status": "na",
+        "title": "ELLA MAE BEGAY"
+    },
+    {
+        "subjects": [ [ "Law Enforcement Assistance" ] ],
+        "publication": "2025-05-16T15:18:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/law-enforcement-assistance\/escaped-inmates-new-orleans-louisiana",
+        "uid": "29dff6ac283a47029da519bc54659e27",
+        "status": "na",
+        "title": "DERRICK GROVES"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2025-06-25T08:03:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/destruction-of-property-and-assault",
+        "uid": "cc7f9ba607774655a42907056542ef17",
+        "status": "na",
+        "title": "DESTRUCTION OF PROPERTY AND ASSAULT"
+    },
+    {
+        "subjects": [ [ "Cyber's Most Wanted" ] ],
+        "publication": "2025-06-24T09:45:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/cyber\/fraudulent-remote-it-workers-from-dprk",
+        "uid": "c67f1fe3ba634acfbaadde07cc238635",
+        "status": "na",
+        "title": "FRAUDULENT REMOTE IT WORKERS FROM DPRK"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2025-06-18T09:29:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/defacement-of-federal-building",
+        "uid": "ac9251d92f7d46c6aba522fe37557777",
+        "status": "na",
+        "title": "DEFACEMENT OF FEDERAL BUILDING"
+    },
+    {
+        "subjects": [ [ "Violent Crimes - Murders" ] ],
+        "publication": "2025-04-03T11:36:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/murders\/miguel-angel-aguilar-ojeda",
+        "uid": "9f9cc060851c445a99afee99bdada94b",
+        "status": "na",
+        "title": "MIGUEL ANGEL AGUILAR OJEDA"
+    },
+    {
+        "subjects": [ [ "Additional Violent Crimes" ] ],
+        "publication": "2025-06-17T08:40:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/additional\/andres-felipe-pineda-mogollon",
+        "uid": "aa7f6bae71e9403bb4b167124a88d2a0",
+        "status": "na",
+        "title": "ANDRES FELIPE PINEDA MOGOLLON"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2025-06-23T11:29:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/heaven-desiree-mcgee",
+        "uid": "6a2f98bb830244d39553c5c49fb8556e",
+        "status": "na",
+        "title": "HEAVEN DESIREE MCGEE"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2023-04-27T07:53:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/geavauntae-sherman",
+        "uid": "866ad95c8f544b51be2a64d21e5797b2",
+        "status": "na",
+        "title": "GEAVAUNTAE SHERMAN"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2021-02-09T14:46:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/dawnita-wilkerson",
+        "uid": "a7274438e24646648b20b3571801cdce",
+        "status": "na",
+        "title": "DAWNITA WILKERSON"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2015-06-05T07:00:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/adrienne-celeste-salinas",
+        "uid": "52edbfb5-9f95-40e3-8af5-d1038f2fce38",
+        "status": "na",
+        "title": "ADRIENNE CELESTE SALINAS"
+    },
+    {
+        "subjects": [ [ "ViCAP Missing Persons" ] ],
+        "publication": "2025-06-18T07:34:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/missing-persons\/glenna-jane-west---st-joseph-michigan",
+        "uid": "399fd16de1844f13956c61a540e4d9bb",
+        "status": "na",
+        "title": "GLENNA JANE WEST - ST. JOSEPH, MICHIGAN"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2014-12-19T07:00:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/aya-nakano",
+        "uid": "855ddd82-4e82-4638-a0c8-39e6863bc9ca",
+        "status": "na",
+        "title": "AYA NAKANO"
+    },
+    {
+        "subjects": [ [ "Violent Crime - Murders" ] ],
+        "publication": "2024-06-25T15:30:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/murders\/joseph-matos",
+        "uid": "afe37027b23046a6a96f8e42d57d1362",
+        "status": "na",
+        "title": "JOSEPH MATOS"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2025-06-11T13:47:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/assault-on-federal-officers",
+        "uid": "1c86e91fa9c04a8f86b4bc34422b2d6b",
+        "status": "na",
+        "title": "ASSAULT ON FEDERAL OFFICERS"
+    },
+    {
+        "subjects": [ [ "ViCAP Missing Persons" ] ],
+        "publication": "2025-05-27T07:54:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/missing-persons\/juan-martinez-gonzalez---miami-florida",
+        "uid": "fe7ee0ca1de943c18823cbbd5b3d7f66",
+        "status": "na",
+        "title": "JUAN MARTINEZ GONZALEZ - MIAMI, FLORIDA"
+    },
+    {
+        "subjects": [ [ "ViCAP Missing Persons" ] ],
+        "publication": "2025-06-11T12:44:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/missing-persons\/kaysey-marie-yoder",
+        "uid": "00bfd8b40e774725bfe2d11e5e24f2c2",
+        "status": "na",
+        "title": "KAYSEY MARIE YODER - EATON, COLORADO"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2025-06-09T09:40:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/carjacking",
+        "uid": "60374b2f019c4455a42e6578b8122ee5",
+        "status": "na",
+        "title": "CARJACKING"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2010-09-10T09:20:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/kyron-richard-horman",
+        "uid": "8789e8f4116633bd872efd3b514ecd0b",
+        "status": "na",
+        "title": "KYRON RICHARD HORMAN"
+    },
+    {
+        "subjects": [ [ "Additional Violent Crimes" ] ],
+        "publication": "2025-06-10T07:32:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/additional\/elpidio-reyna",
+        "uid": "9bccc2dd177445efb3ca426faf8e61f9",
+        "status": "na",
+        "title": "ELPIDIO REYNA"
+    },
+    {
+        "subjects": [ [ "White-Collar Crime" ] ],
+        "publication": "2010-08-12T19:35:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/wcc\/luis-benitez",
+        "uid": "574e3cf3531d3fe1c7903a75a023209a",
+        "status": "na",
+        "title": "LUIS BENITEZ"
+    },
+    {
+        "subjects": [ [ "White-Collar Crime" ] ],
+        "publication": "2010-08-17T15:50:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/wcc\/jose-benitez",
+        "uid": "4e956bd7292c3a844aea29c79833f975",
+        "status": "na",
+        "title": "JOSE BENITEZ"
+    },
+    {
+        "subjects": [ [ "White-Collar Crime" ] ],
+        "publication": "2010-08-17T15:40:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/wcc\/carlos-benitez",
+        "uid": "e3fea65939bd6028912b2e93baafac6c",
+        "status": "na",
+        "title": "CARLOS BENITEZ"
+    },
+    {
+        "subjects": [ [ "Ten Most Wanted Fugitives" ] ],
+        "publication": "2025-05-27T09:52:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/topten\/giovanni-vicente-mosquera-serrano",
+        "uid": "8a6631e9e23e4b75918f3abd7aa72d87",
+        "status": "na",
+        "title": "GIOVANNI VICENTE MOSQUERA SERRANO"
+    },
+    {
+        "subjects": [ [ "ECAP", "Endangered Child Alert Program" ] ],
+        "publication": "2015-04-01T07:00:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/ecap\/seeking-information",
+        "uid": "a7bd85f6-86ae-4fd1-bf62-dbdd16a9dabb",
+        "status": "na",
+        "title": "SEEKING INFORMATION"
+    },
+    {
+        "subjects": [ [ "Criminal Enterprise Investigations" ] ],
+        "publication": "2024-11-21T08:07:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/cei\/joel-myrie",
+        "uid": "d57a9f16851a4464a3a79080a1a26e1a",
+        "status": "na",
+        "title": "JOEL MYRIE"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons", "Indian Country" ] ],
+        "publication": "2024-10-22T11:00:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/sawade-birdinground",
+        "uid": "525c64c8a82940e3aaae18c532cc3019",
+        "status": "na",
+        "title": "SA'WADE BIRDINGROUND"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2025-06-05T10:02:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/calvin-riley",
+        "uid": "b392dfc9a0234482be0175302b98faef",
+        "status": "na",
+        "title": "CALVIN RILEY"
+    },
+    {
+        "subjects": [ [ "Law Enforcement Assistance" ] ],
+        "publication": "2023-10-31T09:22:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/law-enforcement-assistance\/alfredo-antonio-arredondo",
+        "uid": "c52060a10aa54aadba473b2b569771ff",
+        "status": "na",
+        "title": "ALFREDO ANTONIO ARREDONDO"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2025-06-02T16:43:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/allegiant-airlines---bomb-threat",
+        "uid": "54165c69d9ba4b68971a2b03483d2bb3",
+        "status": "na",
+        "title": "ALLEGIANT AIRLINES - BOMB THREAT"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2024-08-21T08:45:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/sebastian-wayne-drake-rogers",
+        "uid": "16de5555c80c444f84f6605974517e4e",
+        "status": "na",
+        "title": "SEBASTIAN WAYNE DRAKE ROGERS"
+    },
+    {
+        "subjects": [ [ "ViCAP Unidentified Persons" ] ],
+        "publication": "2025-05-29T14:14:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/unidentified-persons\/jane-doe---brigham-city-utah",
+        "uid": "ab4ec6472c2f46e394a5ade9c6749fc8",
+        "status": "na",
+        "title": "JANE DOE - BRIGHAM CITY, UTAH"
+    },
+    {
+        "subjects": [ [ "Violent Crime - Murders" ] ],
+        "publication": "2010-09-01T16:05:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/murders\/juan-carlos-martinez",
+        "uid": "5c792a417dd96f4d213a2df7ca32c11f",
+        "status": "na",
+        "title": "JUAN CARLOS MARTINEZ"
+    },
+    {
+        "subjects": [ [ "Violent Crime - Murders" ] ],
+        "publication": "2023-11-27T10:51:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/murders\/jesus-jose-astorga",
+        "uid": "72de4642f05f4ef880d4cd50a32829e6",
+        "status": "na",
+        "title": "JESUS JOSE ASTORGA"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2010-09-10T13:25:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/asha-jaquilla-degree",
+        "uid": "00216d662e01be1a339e64a9d9c6251e",
+        "status": "na",
+        "title": "ASHA JAQUILLA DEGREE"
+    },
+    {
+        "subjects": [ [ "Seeking Information - Terrorism" ] ],
+        "publication": "2024-11-05T10:10:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/terrorinfo\/seyed-yahya-hosseiny-panjaki",
+        "uid": "38ff21f6ff8f492fb4d8b5815da38183",
+        "status": "na",
+        "title": "SEYED YAHYA HOSSEINY PANJAKI"
+    },
+    {
+        "subjects": [ [ "ViCAP Missing Persons" ] ],
+        "publication": "2025-05-22T10:28:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/missing-persons\/paige-natassia-coffey---cleveland-ohio",
+        "uid": "7bda55e573c841969138553f6e31320f",
+        "status": "na",
+        "title": "PAIGE NATASSIA COFFEY - CLEVELAND, OHIO"
+    },
+    {
+        "subjects": [ [ "Cyber's Most Wanted" ] ],
+        "publication": "2021-02-05T16:04:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/cyber\/jon-chang-hyok",
+        "uid": "78101bc9204745b782e0c1476d97c4ad",
+        "status": "na",
+        "title": "JON CHANG HYOK"
+    },
+    {
+        "subjects": [ [ "Cyber's Most Wanted" ] ],
+        "publication": "2021-02-05T16:17:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/cyber\/kim-il",
+        "uid": "96f0ca96b04645cdaa61685d5d95307b",
+        "status": "na",
+        "title": "KIM IL"
+    },
+    {
+        "subjects": [ [ "Cyber's Most Wanted" ] ],
+        "publication": "2018-08-30T09:36:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/cyber\/park-jin-hyok",
+        "uid": "576af852e4dc493aa82205e3e83a28fe",
+        "status": "na",
+        "title": "PARK JIN HYOK"
+    },
+    {
+        "subjects": [ [ "Seeking Information", "Indian Country" ] ],
+        "publication": "2025-05-06T18:47:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/emily-pike",
+        "uid": "0b17c44c8fdf44dc9617a41613ab8671",
+        "status": "na",
+        "title": "EMILY PIKE"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2025-04-23T12:37:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/donna-hatfield",
+        "uid": "d7773ebb6b704e4fbf22b9b766925422",
+        "status": "na",
+        "title": "DONNA HATFIELD"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2025-05-15T08:17:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/gretchen-eve-fleming",
+        "uid": "bc3df94013594894ae7880ad2a3483ad",
+        "status": "na",
+        "title": "GRETCHEN EVE FLEMING"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2014-02-05T07:00:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/wesley-dale-morgan",
+        "uid": "f422d6c2-5b39-488e-a83e-89012a5c56f7",
+        "status": "na",
+        "title": "WESLEY DALE MORGAN"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2025-03-27T12:07:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/janiyah-mcmichael",
+        "uid": "86c37b8d746a4c908cae082f2527f864",
+        "status": "na",
+        "title": "JA'NIYAH MCMICHAEL"
+    },
+    {
+        "subjects": [ [ "ViCAP Homicides and Sexual Assaults" ] ],
+        "publication": "2025-05-09T09:20:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/homicides-and-sexual-assaults\/eulalia-lolly-chavez---lebanon-illinois",
+        "uid": "3fa571f77e054428ac15eaa92a553969",
+        "status": "na",
+        "title": "EULALIA “LOLLY” CHAVEZ - LEBANON, ILLINOIS"
+    },
+    {
+        "subjects": [ [ "ViCAP Missing Persons" ] ],
+        "publication": "2025-05-07T12:36:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/missing-persons\/ylva-annika-hagner---belmont-california",
+        "uid": "1d24b2834d284ec89f70dfdb6640b4c5",
+        "status": "na",
+        "title": "YLVA ANNIKA HAGNER - BELMONT, CALIFORNIA"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2025-05-02T10:36:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/commercial-armed-robbery",
+        "uid": "1a19e62e32904dd6972b753c1807db48",
+        "status": "na",
+        "title": "COMMERCIAL ARMED ROBBERY"
+    },
+    {
+        "subjects": [ [ "Criminal Enterprise Investigations" ] ],
+        "publication": "2025-05-06T11:21:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/cei\/christian-xavier-rucker",
+        "uid": "a5bf8be1f70944048c869ff1ee8c4139",
+        "status": "na",
+        "title": "CHRISTIAN XAVIER RUCKER"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2022-03-29T07:46:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/commercial-aircraft-laser-incidents",
+        "uid": "4bfe391228e540d9abaa9a4710eb23e3",
+        "status": "na",
+        "title": "COMMERCIAL AIRCRAFT LASER INCIDENTS"
+    },
+    {
+        "subjects": [ [ "Cyber's Most Wanted" ] ],
+        "publication": "2024-07-08T09:28:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/cyber\/rim-jong-hyok",
+        "uid": "ee86c65b3f744e298559edc68633b802",
+        "status": "na",
+        "title": "RIM JONG HYOK"
+    },
+    {
+        "subjects": [ [ "Law Enforcement Assistance" ] ],
+        "publication": "2025-05-06T07:22:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/law-enforcement-assistance\/byshere-smith",
+        "uid": "e834caf5aadf4dc1a90354fe3aa104ec",
+        "status": "na",
+        "title": "BYSHERE SMITH"
+    },
+    {
+        "subjects": [ [ "Ten Most Wanted Fugitives" ] ],
+        "publication": "2017-09-27T08:29:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/topten\/fausto-isidro-meza-flores",
+        "uid": "882c8ec2d7134a0189e08173f915243f",
+        "status": "na",
+        "title": "FAUSTO ISIDRO MEZA-FLORES"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2024-07-09T11:10:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/zahra-shikder",
+        "uid": "8f378ff4ce7e428ca3d0cc0720a0cdf7",
+        "status": "na",
+        "title": "ZAHRA SHIKDER"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2024-07-09T11:01:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/yusuf-shikder",
+        "uid": "1e6447d19a0f4c668fc834e963fcb89d",
+        "status": "na",
+        "title": "YUSUF SHIKDER"
+    },
+    {
+        "subjects": [ [ "Law Enforcement Assistance" ] ],
+        "publication": "2021-02-02T10:08:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/law-enforcement-assistance\/joshua-t-bobbitt",
+        "uid": "26c09421661f4209be18b4b0f24cda4b",
+        "status": "na",
+        "title": "JOSHUA T. BOBBITT"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2025-04-11T06:47:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/tesla-charging-station-arson",
+        "uid": "707c49f30bb248a3bb0d31b7629874b6",
+        "status": "na",
+        "title": "TESLA CHARGING STATION ARSON"
+    },
+    {
+        "subjects": [ [ "Law Enforcement Assistance" ] ],
+        "publication": "2025-04-10T13:03:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/law-enforcement-assistance\/jonathan-adrian-baez-perez",
+        "uid": "5187b47ed74c4cd69afeef4fe8e01ccf",
+        "status": "na",
+        "title": "JONATHAN ADRIAN BAEZ PEREZ"
+    },
+    {
+        "subjects": [ [ "ViCAP Missing Persons" ] ],
+        "publication": "2024-03-28T11:23:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/missing-persons\/latoya-renae-grissom---texarkana-texas",
+        "uid": "353d857686e04c1dad1a8bf1ba8c03d6",
+        "status": "na",
+        "title": "LATOYA RENAE GRISSOM - TEXARKANA, TEXAS"
+    },
+    {
+        "subjects": [ [ "Violent Crime - Murders" ] ],
+        "publication": "2015-06-02T07:00:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/murders\/joe-matthew-constance",
+        "uid": "d0280905-52b5-4c98-90be-599cd73ad306",
+        "status": "na",
+        "title": "JOE MATTHEW CONSTANCE"
+    },
+    {
+        "subjects": [ [ "Ten Most Wanted Fugitives" ] ],
+        "publication": "2021-10-20T07:20:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/topten\/yulan-adonay-archaga-carias",
+        "uid": "d078deee25ea4b9aa6f4ac4a681e2f65",
+        "status": "na",
+        "title": "YULAN ADONAY ARCHAGA CARIAS"
+    },
+    {
+        "subjects": [ [ "White-Collar Crime" ] ],
+        "publication": "2018-01-09T12:24:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/wcc\/rodney-allen",
+        "uid": "b6f013d399894b32ba3feead437b25ea",
+        "status": "na",
+        "title": "RODNEY DEAN ALLEN"
+    },
+    {
+        "subjects": [ [ "ViCAP Unidentified Persons" ] ],
+        "publication": "2025-03-25T07:54:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/unidentified-persons\/jane-doe---placitas-new-mexico",
+        "uid": "fb7fd266e7154ed6991c86fa0f9b0ee9",
+        "status": "na",
+        "title": "JANE DOE - PLACITAS, NEW MEXICO"
+    },
+    {
+        "subjects": [ [ "ViCAP Missing Persons" ] ],
+        "publication": "2025-04-18T06:55:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/missing-persons\/olga-barreiro-lopez---miami-florida",
+        "uid": "8c16bf67dadf4aac8e7180873dc30805",
+        "status": "na",
+        "title": "OLGA BARREIRO-LOPEZ - MIAMI, FLORIDA"
+    },
+    {
+        "subjects": [ [ "White-Collar Crime" ] ],
+        "publication": "2014-10-24T07:00:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/wcc\/yousef-kurdy",
+        "uid": "fabd733e-6f85-48a1-b954-7c91e23b626e",
+        "status": "na",
+        "title": "YOUSEF KURDY"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2023-12-01T10:19:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/shelbie-lynn-dwyer",
+        "uid": "2fd9cbe842c64f2ba7a63aeee2978e21",
+        "status": "na",
+        "title": "SHELBIE LYNN DWYER"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons", "Indian Country" ] ],
+        "publication": "2024-06-06T11:23:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/giovanna-tyler",
+        "uid": "3c583fb13983442ca9a456c0be45dcc4",
+        "status": "na",
+        "title": "GIOVANNA TYLER"
+    },
+    {
+        "subjects": [ [ "ViCAP Missing Persons" ] ],
+        "publication": "2025-04-15T07:35:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/missing-persons\/william-eric-may---arkansastexas",
+        "uid": "40ed9d89f5ec4a1eac7134c10897160a",
+        "status": "na",
+        "title": "WILLIAM ERIC MAY - ARKANSAS\/TEXAS"
+    },
+    {
+        "subjects": [ [ "ViCAP Missing Persons" ] ],
+        "publication": "2025-04-11T11:50:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/missing-persons\/robert-frank-urton---lakeside-arizona",
+        "uid": "2f497c77e23c4df1880e79d50afc217c",
+        "status": "na",
+        "title": "ROBERT FRANK URTON - LAKESIDE, ARIZONA"
+    },
+    {
+        "subjects": [ [ "ViCAP Missing Persons" ] ],
+        "publication": "2025-04-11T11:28:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/missing-persons\/john-balistreri---middleton-wisconsin",
+        "uid": "d404eb56b14f4d6e98e7cc2b3eb3bfc8",
+        "status": "na",
+        "title": "JOHN BALISTRERI - MIDDLETON, WISCONSIN"
+    },
+    {
+        "subjects": [ [ "ViCAP Homicides and Sexual Assaults" ] ],
+        "publication": "2025-04-11T07:40:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/homicides-and-sexual-assaults\/molly-monette-hogan---oklahoma",
+        "uid": "ff4f35fe43d74707b01f25f6fc2be8ce",
+        "status": "na",
+        "title": "MOLLY MONETTE HOGAN - OKLAHOMA"
+    },
+    {
+        "subjects": [ [ "Criminal Enterprise Investigations" ] ],
+        "publication": "2024-08-13T12:28:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/cei\/carlos-gonzalez",
+        "uid": "ed1947f0f0624075b076e58d97d05f67",
+        "status": "na",
+        "title": "CARLOS GONZALEZ"
+    },
+    {
+        "subjects": [ [ "Criminal Enterprise Investigations" ] ],
+        "publication": "2024-08-13T12:18:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/cei\/eladio-gastelum",
+        "uid": "93e0cd9810404a3a820f33ca61f92f5a",
+        "status": "na",
+        "title": "ELADIO GASTELUM"
+    },
+    {
+        "subjects": [ [ "Criminal Enterprise Investigations" ] ],
+        "publication": "2024-08-13T12:11:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/cei\/adrian-diaz",
+        "uid": "541350f5f05f4e54894dc1cc67682371",
+        "status": "na",
+        "title": "ADRIAN DIAZ"
+    },
+    {
+        "subjects": [ [ "Criminal Enterprise Investigations" ] ],
+        "publication": "2024-08-13T12:02:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/cei\/saul-ayon-quintero",
+        "uid": "bf7ce0ae3ac7436d940a5bf5657d6e3f",
+        "status": "na",
+        "title": "SAUL AYON QUINTERO"
+    },
+    {
+        "subjects": [ [ "Kidnappings\/Missing Persons" ] ],
+        "publication": "2025-03-27T13:10:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/cynthia-martyna-bah-traore",
+        "uid": "e1137b06b986417cbdfcb466d0518024",
+        "status": "na",
+        "title": "CYNTHIA MARTYNA BAH-TRAORE"
+    },
+    {
+        "subjects": [ [ "Crimes Against Children" ] ],
+        "publication": "2010-08-27T17:55:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/cac\/jose-antonio-barroso",
+        "uid": "f03b9a09ff06f2ea36d26591898a7efe",
+        "status": "na",
+        "title": "JOSE ANTONIO BARROSO"
+    },
+    {
+        "subjects": [ [ "Additional Violent Crimes" ] ],
+        "publication": "2016-07-15T18:11:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/additional\/waqar-ghumman",
+        "uid": "5dea78245ae04af889d934cf4b262f40",
+        "status": "na",
+        "title": "WAQAR GHUMMAN"
+    },
+    {
+        "subjects": [ [ "Additional Violent Crimes" ] ],
+        "publication": "2016-07-15T16:14:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/additional\/mohsin-zamir",
+        "uid": "9cf69a0f92394e0e9e2dcd2a312cf39d",
+        "status": "na",
+        "title": "MOHSIN ZAMIR"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2021-12-21T17:15:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/lina-sardar-khil",
+        "uid": "574bc9468d09486b9f2d519bdf208033",
+        "status": "na",
+        "title": "LINA SARDAR KHIL"
+    },
+    {
+        "subjects": [ [ "ViCAP Missing Persons" ] ],
+        "publication": "2025-04-04T11:21:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/missing-persons\/jacob-cabinaw-michiganarkansas",
+        "uid": "401dd73032f74126ad33e3eff359d7bc",
+        "status": "na",
+        "title": "JACOB CABINAW - MICHIGAN\/ARKANSAS"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2018-07-02T10:33:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/patrick-scott-jr",
+        "uid": "6bc39f5fe60a404899acd3ea41999ec1",
+        "status": "na",
+        "title": "PATRICK SCOTT, JR."
+    },
+    {
+        "subjects": [ [ "ViCAP Unidentified Persons" ] ],
+        "publication": "2025-04-03T09:38:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/unidentified-persons\/john-doe---rosebud-texas",
+        "uid": "f381bce74d85423fbf6190c15ffe3078",
+        "status": "na",
+        "title": "JOHN DOE - ROSEBUD, TEXAS"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2020-03-17T09:59:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/alonzo-brooks",
+        "uid": "4c1554ae39a84dc79952f56da3545c92",
+        "status": "na",
+        "title": "ALONZO BROOKS"
+    },
+    {
+        "subjects": [ [ "Kidnappings and Missing Persons" ] ],
+        "publication": "2025-03-13T08:48:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/kidnap\/miguel-oliveras",
+        "uid": "9b1a6571e02e4755b1bb2ce94f71b0b6",
+        "status": "na",
+        "title": "MIGUEL OLIVERAS"
+    },
+    {
+        "subjects": [ [ "ViCAP Homicides and Sexual Assaults" ] ],
+        "publication": "2025-04-01T07:33:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/homicides-and-sexual-assaults\/josephine-helmandollar-and-charles-seaton---kingsport-tennessee",
+        "uid": "612e368cb7b54f2e97311e38265355c2",
+        "status": "na",
+        "title": "JOSEPHINE HELMANDOLLAR AND CHARLES SEATON - KINGSPORT, TENNESSEE"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2025-03-26T11:06:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/federal-courthouse-vandalism",
+        "uid": "19c73bbf7b23423badfd198bb59f8685",
+        "status": "na",
+        "title": "FEDERAL COURTHOUSE VANDALISM"
+    },
+    {
+        "subjects": [ [  ] ],
+        "publication": "2025-03-28T08:41:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/vicap\/homicides-and-sexual-assaults\/anita-bergner---warner-robins-georgia",
+        "uid": "b29b95c6056f47b999b9914814056550",
+        "status": "na",
+        "title": "ANITA BERGNER - WARNER ROBINS, GEORGIA"
+    },
+    {
+        "subjects": [ [ "Counterintelligence" ] ],
+        "publication": "2024-08-28T13:03:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/counterintelligence\/baoxia-liu",
+        "uid": "eaa3a8996c8c46ceb6d235d506d6479e",
+        "status": "na",
+        "title": "BAOXIA LIU"
+    },
+    {
+        "subjects": [ [ "Seeking Information" ] ],
+        "publication": "2010-10-08T02:30:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/seeking-info\/providing-material-support-1",
+        "uid": "5cf043c8407b26590370452515799a69",
+        "status": "na",
+        "title": "PROVIDING MATERIAL SUPPORT"
+    },
+    {
+        "subjects": [ [ "Seeking Information - Terrorism" ] ],
+        "publication": "2010-08-02T00:00:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/terrorinfo\/sirajuddin-haqqani",
+        "uid": "2f29ae89310c95494df8920b75d63995",
+        "status": "na",
+        "title": "SIRAJUDDIN HAQQANI"
+    },
+    {
+        "subjects": [ [ "Counterintelligence" ] ],
+        "publication": "2024-08-28T14:24:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/counterintelligence\/yanlai-zhong",
+        "uid": "a390172303744304abff2c58143f51f8",
+        "status": "na",
+        "title": "YANLAI ZHONG"
+    },
+    {
+        "subjects": [ [ "White Collar Crime" ] ],
+        "publication": "2023-06-05T12:07:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/wcc\/bogdan-adrian-purgariu",
+        "uid": "ba2ab339c67d474ea8aff4044e56622d",
+        "status": "na",
+        "title": "BOGDAN ADRIAN PURGARIU"
+    },
+    {
+        "subjects": [ [ "White Collar Crime" ] ],
+        "publication": "2023-06-05T11:57:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/wcc\/birdal-osman",
+        "uid": "588703575fda431fb6dae11c862a07af",
+        "status": "na",
+        "title": "BIRDAL OSMAN"
+    },
+    {
+        "subjects": [ [ "White Collar Crime" ] ],
+        "publication": "2023-06-05T12:18:00",
+        "url": "https:\/\/www.fbi.gov\/wanted\/wcc\/ilie-sebastian-laur-vasilescu",
+        "uid": "e9df567eb05749c3879cee2afa3a8686",
+        "status": "na",
+        "title": "ILIE-SEBASTIAN-LAUR VASILESCU"
+    }
+]

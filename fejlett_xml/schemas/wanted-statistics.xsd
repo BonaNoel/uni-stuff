@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://example.com/wanted/statistics"
+    xmlns="http://example.com/wanted/statistics"
+    elementFormDefault="qualified">
+    
+    <xs:element name="wantedStatistics">
+        <xs:complexType>
+            <xs:sequence>
+                
+                <xs:element name="totalPersons" type="xs:integer"/>
+                <xs:element name="distinctStatuses" type="xs:integer"/>
+                <xs:element name="rewardedPersons" type="xs:integer"/>
+                <xs:element name="seekingInformationPersons" type="xs:integer"/>
+                
+                <xs:element name="statusBreakdown">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="status" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="name" type="xs:string" use="required"/>
+                                    <xs:attribute name="count" type="xs:integer" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

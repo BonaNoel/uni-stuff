@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wantedStatistics xmlns="http://example.com/wanted/statistics">
+    <totalPersons>100</totalPersons>
+    <distinctStatuses>2</distinctStatuses>
+    <rewardedPersons>49</rewardedPersons>
+    <seekingInformationPersons>18</seekingInformationPersons>
+    <statusBreakdown>
+        <ws:status xmlns:ws="http://example.com/wanted/statistics"
+                   name="located"
+                   count="1"/>
+        <ws:status xmlns:ws="http://example.com/wanted/statistics" name="na" count="99"/>
+    </statusBreakdown>
+</wantedStatistics>
